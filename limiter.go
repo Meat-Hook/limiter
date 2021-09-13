@@ -70,7 +70,7 @@ func (l *Limiter) Allow() bool {
 	return allow
 }
 
-// Current returns
+// Current returns current limit.
 func (l *Limiter) Current() Limit {
 	l.mu.RLock()
 	defer l.mu.RUnlock()
